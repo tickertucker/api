@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\Product\ProductResource;
 use App\Http\Resources\Product\ProductCollection;
+use App\Http\Resources\Product\ProductResource;
 use App\Model\Product;
 use Illuminate\Http\Request;
 
@@ -19,8 +19,8 @@ class ProductController extends Controller
         //
         // return ProductResource::collection(Product::all());
         // return ProductCollection(Product::all());
-        return ProductCollection::collection(Product::all());
-
+        // return ProductCollection::collection(Product::all());
+        return ProductCollection::collection(Product::paginate(5));
     }
 
     /**
