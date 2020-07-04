@@ -80,5 +80,7 @@ class Handler extends ExceptionHandler
 
         // dd($exception);
         return parent::render($request, $exception);
+        // return parent::render($request, $e);
+
     }
 }
